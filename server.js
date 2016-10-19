@@ -9,7 +9,7 @@ app.use(express.static('dist'));
 // proxy api request
 app.all("/api/*", (req, res) => {
   apiProxy.web(req, res, {
-    target: 'http://localhost:8080'
+    target: 'http://localhost:8080' || process.env.BACK_URL
   });
 });
 
@@ -18,5 +18,8 @@ app.get('*', (req, res) => {
   res.sendFile(__dirname + '/dist/index.html');
 });
 
-app.listen(4200);
-console.log("server is running on http://localhost:4200");
+app.listen(4200,"0.0.0.0", function() {
+  console.log('Listening on port %d', server.address().port);
+});
+
+console.log("server is running on http://localhost:3000");
