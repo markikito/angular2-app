@@ -65,4 +65,4 @@ Under construction...
 [travis-image]: https://travis-ci.org/springboot-angular2-tutorial/angular2-app.svg
 
 ## Una herramienta para editar en markdown
-[https://jbt.github.io/markdown-editor]
+* [markdown-editor](https://jbt.github.io/markdown-editor)
